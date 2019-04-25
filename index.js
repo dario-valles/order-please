@@ -5,13 +5,12 @@
 // Write a function called `urOrderPls` that sorts the words in a string
 // based on the number within each word and returns a new string with sorted words.
 
-// Your input will be a string with few words. Each word in the string contains a 
+// Your input will be a string with few words. Each word in the string contains a
 // single positive integer. This integer indicates the position that the word should have
 //  in the result string.
 
 // This integer can be from 1 to 9. So 1 will be the first word (not 0).
-//  If the input string is empty, return an empty string. 
-
+//  If the input string is empty, return an empty string.
 
 // EXAMPLES
 
@@ -32,10 +31,12 @@
 // Alternatively send an email with your solution to shanshanc.chen@gmail.com
 
 function urOrderPls(inputStr) {
-  // your code here
-
-
+  return (
+    inputStr
+      .split(' ')
+      .sort((a, b) => a.match(/\d+/g)[0] - b.match(/\d+/g)[0])
+      .join(' ') || ''
+  );
 }
 
 module.exports = urOrderPls;
-
