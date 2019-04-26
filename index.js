@@ -30,13 +30,10 @@
 // changes to your forked repo and submit a pull request.
 // Alternatively send an email with your solution to shanshanc.chen@gmail.com
 
-function urOrderPls(inputStr) {
-  return (
-    inputStr
-      .split(' ')
-      .sort((a, b) => a.match(/\d+/g)[0] - b.match(/\d+/g)[0])
-      .join(' ') || ''
-  );
-}
+const urOrderPls = inputStr =>
+  inputStr
+    .split(' ')
+    .sort((a, b) => a.match(/\d+/g)[0] - b.match(/\d+/g)[0])
+    .join(' ') || '';
 
 module.exports = urOrderPls;
